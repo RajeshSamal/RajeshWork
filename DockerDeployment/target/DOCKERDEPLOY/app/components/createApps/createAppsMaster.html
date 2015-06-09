@@ -1,0 +1,48 @@
+
+
+
+<div class="column column-onetwo">
+ <div >
+<ul ng-repeat="app in appNames">
+        
+        
+     <svg height="130" width="500" ng-click="setAppName()" value="{{app}}">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="#4169E1" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">{{app}}</text>
+  
+</svg>
+
+    </ul>
+</div>
+</div>
+
+<div class="column column-three">
+  
+    <form ng-submit="submitTheForm()">
+     	<br>
+        <br>
+         <div >
+        <label for="applicationName">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application Name</label>
+        <input type="text" id="applicationName" ng-model="appName">
+         </div>
+        <br>
+        <br>
+         <div >
+        <label for="fileUpload">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Json upload</label><input type="file" id="fileUpload" file-model="dockerFile">
+         </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="buttons" align="center">
+            <button class="buttons" type="submit" style="background-color: grey;align-content: center">Run</button>
+        </div>
+    </form>
+</div>
+

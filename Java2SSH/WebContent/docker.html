@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Docker Container Creation</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+<link href="js/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="js/docker.js"></script>
+<link href="docker/docker.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="top">
+<img src="docker/header1.png" id="headerImg" alt="Header" />
+	 <h2>Plan Deployment Using Docker</h2>
+	 <div id="popupdev" title="Basic modal dialog" style="display: none"></div>
+	 <div id="popupqa" title="Basic modal dialog" style="display: none"></div>
+	 <div id="popupstage" title="Basic modal dialog" style="display: none"></div>
+	 <div id="popupaws" title="Basic modal dialog" style="display: none"></div>
+</div>
+	<div id="container">
+	
+		<div id="hosttype">
+
+
+			
+				<legend>Select Plan Deployment Type</legend>
+				<br> <input type="radio" name="host" value="single-host" />Single
+				Host <br> <br> <input type="radio" name="host"
+					value="multiple-host" />Multiple Host <br> <br>
+				<div id="singleDiv">
+					<img src="docker/Single_Final.png" id="single" alt="Single Host" />
+				</div>
+				<div id="multipleDiv">
+					<img src="docker/Multiple_Final.png" id="multiple" alt="Single Host" />
+				</div>
+			
+		</div>
+		<div id="cloudN">
+				<img src="docker/c3.png" id="cloudnImg" alt="CloudN" />
+				<div id="DestDev">
+					<img src="docker/nDev.png" id="devImg" alt="CloudNDev" />
+				</div>
+				<div id="DestQa">
+					 <img src="docker/nQA.png" id="qaImg" alt="CloudNQA" />
+				</div>
+				
+				<div id="DestStage">
+					<img src="docker/nStage.png" id="stageImg" alt="CloudNDev" />
+				</div>
+			
+		</div>
+		<div id="amazon">
+				<img src="docker/a2.png" alt="Amazon" id="aws" />
+				<div id="DestAWS">
+					<img src="docker/dAws.png" id="awsImg" alt="CloudNDev" />
+</canvas>
+				</div>
+			
+		</div>
+	</div>
+	<div id="footer">
+	<img src="docker/footer.png" id="footerImg" alt="Footer" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+
+
+<div class="column column-onetwothree">
+ <div >
+ 
+  <div class="middleDiv"> 
+  
+ <table width="300" height="100" ng-show="vmDetails">
+ <tr >
+    <td bgcolor="grey">App Name</td>
+    <td bgcolor="grey">IP Address</td>
+    <td bgcolor="grey">Link To Docker UI</td>
+  </tr> 
+  <tr ng-repeat="vm in vmDetails">
+    <td>{{vm.name}}</td>
+    <td>{{vm.ip}}</td>
+    
+    <td ng-click="dockerUI(vm.ip)">Docker UI</td>
+  </tr>
+</table>
+</div>
+</div>
+
+
+

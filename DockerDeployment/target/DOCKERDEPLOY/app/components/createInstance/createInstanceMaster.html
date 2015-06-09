@@ -1,0 +1,166 @@
+<div class="column column-one">
+    <div draggable="true" ondragstart="drag_start(event)" class="image"><center>
+        <img src="nginx1.png" id="nginxImage" alt="nginx"
+             height="80" width="80" align="middle"
+             class="image">
+             </center>
+             </div>
+    <br/>
+    <br/>
+
+    <div draggable="true" ondragstart="drag_start(event)" class="image"><center>
+        <img src="tomcat1.png" id="tomcatImage"
+             alt="tomcat" height="80" width="80"
+             align="middle" class="image"></center></div>
+    <br/>
+    <br/>
+
+    <div draggable="true" ondragstart="drag_start(event)" class="image"><center>
+        <img src="mysql1.png" id="mysqlImage" alt="mysql"
+             height="80" width="80" align="middle"
+             class="image"></center></div>
+    <br/>
+    <br/>
+
+    <div draggable="true" ondragstart="drag_start(event)" class="image"><center>
+        <img src="mongodb1.png" id="mongodbImage"
+             alt="mongdb" height="80" width="80"
+             align="middle" class="image"></center></div>
+</div>
+
+
+<div class="column column-two" ondragover="drag_over(event)" ondrop="drop(event)">
+    <div id="svgContainer">
+        <svg id="svg1" width="0" height="0">
+            <path
+                    id="path1"
+                    d="M0 0"
+                    stroke="#000"
+                    fill="none"
+                    stroke-width="5px"></path>
+            <path
+                    id="path2"
+                    d="M0 0"
+                    stroke="#000"
+                    fill="none"
+                    stroke-width="5px"></path>
+            <path
+                    id="path3"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path4"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path5"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path6"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path7"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path8"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path9"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+            <path
+                    id="path10"
+                    d="M0 0"
+                    stroke-width="5px"
+                    style="stroke:#000; fill:none;"></path>
+        </svg>
+    </div>
+</div>
+
+<div class="column column-three">
+    <!--<div id="general">
+        <select>
+            <option value="single">Single Host</option>
+            <option value="multiple">Multiple Host</option>
+        </select>
+        <select>
+            <option value="QA">QA</option>
+            <option value="DEV">DEV</option>
+            <option value="STAGING">STAGING</option>
+        </select>
+    </div>-->
+    <!--
+        <div>
+            <input type="text" name="nodeName" id="nodeName"/>
+            <br/>
+            <input type="text" name="url" id="url"/>
+            <br/>
+            <select>
+                <option value="Mongo">Mongo</option>
+                <option value="Mysql">Mysql</option>
+                <option value="Tomcat">Tomcat</option>
+                <option value="Nginx">Nginx</option>
+            </select>
+            File upload
+            <input type="file">
+        </div>
+    -->
+    <form ng-submit="submitTheForm()">
+    <br>
+        <br>
+        <div >
+        <label for="applicationName">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application Name</label>
+        <input type="text" id="applicationName" ng-model="appName">
+        </div>
+        
+        <br>
+        <br>
+         <div >
+        <label for="fileUpload">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Json Upload</label>
+        	<input type="file" id="fileUpload" file-model="imageFile">
+        </div>
+        <br>
+        <br>
+         <div >
+        <label for="noOfTomcatInstances">&nbsp;&nbsp;&nbsp;&nbsp;No. of tomcat instances</label>
+        <input type="text" id="noOfTomcatInstances" value="1">
+        </div>
+        <br>
+        <br>
+         <div >
+        <label for="noOfMysqlInstances">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. of mysql instances</label>
+        <input type="text" id="noOfMysqlInstances" value="1" readonly disabled>
+        </div>
+        <br>
+        <br>
+         <div >
+        <label for="noOfMongoInstances">No. of mongodb instances</label>
+        <input type="text" id="noOfMongoInstances" value="1" readonly disabled>
+        </div>
+        <br>
+        <br>
+        <div >
+        <label for="noOfNginxInstances">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. of nginx instances</label>
+        <input type="text" id="noOfNginxInstances" value="1" readonly disabled>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="buttons" align="center">
+            <button class="buttons" type="submit" style="background-color: grey;align-content: center">Save</button>
+        </div>
+    </form>
+</div>
+

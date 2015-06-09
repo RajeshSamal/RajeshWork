@@ -1,0 +1,124 @@
+
+html { height:100%; }
+html body {
+    font-size: 100%;
+    height:100%;
+}
+html body #top {
+	width: 100%;
+	height: 15%;
+}
+html body #top #headerImg {
+	height: 50%;
+	width: 100%;
+}
+
+html body #top h2 {
+    font-family:verdana;
+     font-style: normal;
+     font-size: 1em;
+     color: blue;
+    text-align: center;
+    height: 10%;
+}
+html body #container {
+	width: 80%;
+	height: 80%;
+    border-width: 1px;
+    border-color: #808080;
+    
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+     border-bottom-style: solid;
+     margin-left: auto;
+    margin-right: auto;
+}
+
+html  body #hosttype {
+	font-family:verdana;
+	 font-style: normal;
+	 font-size: 1em;
+	width: 30%;
+	height: 100%;
+	float: left;
+	color: blue;
+}
+
+
+html  body #container #cloudN {
+	width: 35%;
+	height: 100%;
+	float: left;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: #808000;
+	border-right-color: #808000;
+}
+html  body #container #cloudN #devImg {
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+}
+html  body #container #cloudN #qaImg {
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+}
+html  body #container #cloudN #stageImg {
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+}
+html  body #container #amazon #awsImg {
+	width: 100%;
+	height: 50%;
+	margin-left: 5%;
+}
+
+html  body #container #amazon {
+	width: 30%;
+	height: 100%;
+	float: left;
+} 
+html  body #container #amazon  #aws {
+	height: 7%;
+}
+
+html  body #container #hosttype #single {
+	width: 80%;
+	height: 40%;
+	display: none;
+}
+
+html  body #container #hosttype  #multiple {
+	width: 80%;
+	height: 30%;
+	display: none;
+}
+
+html  body #footer {
+	height: 5%;
+}
+html  body #footer #footerImg {
+	height: 100%;
+	width: 100%;
+}
+
+.draggable {
+	filter: alpha(opacity = 60);
+	opacity: 0.6;
+}
+
+.dropped {
+	position: static !important;
+}
+.ui-dialog-titlebar  {
+  background-color: #c0c0c0;
+  background-image: none;
+  color: blue;
+}
+.ui-button-text{
+  color: blue;
+}
+.ui-dialog-titlebar-close {display: none }

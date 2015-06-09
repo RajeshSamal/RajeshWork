@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<context:component-scan base-package="com.ssh.exec" />
+
+	<bean id="devexec" class="com.ssh.exec.ExecuteScript">
+		<property name="host" value="${dev.host}" />
+		<property name="user" value="${dev.user}" />
+		<property name="password" value="${dev.password}" />
+		<property name="command" value="${dev.command}" />
+	</bean>
+
+	<bean id="qaexec" class="com.ssh.exec.ExecuteScript">
+		<property name="host" value="${qa.host}" />
+		<property name="user" value="${qa.user}" />
+		<property name="password" value="${qa.password}" />
+		<property name="command" value="${qa.command}" />
+	</bean>
+
+	<bean id="stageexec" class="com.ssh.exec.ExecuteScript">
+		<property name="host" value="${stage.host}" />
+		<property name="user" value="${stage.user}" />
+		<property name="password" value="${stage.password}" />
+		<property name="command" value="${stage.command}" />
+	</bean>
+
+	<bean id="awsexec" class="com.ssh.exec.ExecuteScript">
+		<property name="host" value="${aws.host}" />
+		<property name="user" value="${aws.user}" />
+		<property name="password" value="${aws.password}" />
+		<property name="command" value="${aws.command}" />
+	</bean>
+
+	<util:list id="stageCommands">
+		<value>${stage.multicommand1}</value>
+		<value>${stage.multicommand2}</value>
+		<value>${stage.multicommand3}</value>
+		<value>${stage.multicommand4}</value>
+		<value>${stage.multicommand5}</value>
+	</util:list>
+	
+	<util:list id="stageHosts" >
+		<value>${stage.multihost1}</value>
+		<value>${stage.multihost2}</value>
+		<value>${stage.multihost3}</value>
+		<value>${stage.multihost4}</value>
+		<value>${stage.multihost5}</value>
+	</util:list>
+	
+	<util:list id="stagePasswords">
+		<value>${stage.multipassword1}</value>
+		<value>${stage.multipassword2}</value>
+		<value>${stage.multipassword3}</value>
+		<value>${stage.multipassword4}</value>
+		<value>${stage.multipassword5}</value>
+	</util:list>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+
+		<property name="location">
+			<value>exec.properties</value>
+		</property>
+	</bean>
+</beans>
