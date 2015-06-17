@@ -16,7 +16,7 @@ ci.controller('CreateInstanceController', ['$scope', '$http','$location',functio
                 },
                 headers: { 'Content-Type': undefined }
                 });
-	       $location.path("");
+	       $location.path("apps");
 	        
 	        
 	       

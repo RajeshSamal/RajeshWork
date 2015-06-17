@@ -1,4 +1,4 @@
-angular.module('createInstanceui', ['ngRoute','createinstance','createapps','createruns'])
+angular.module('createInstanceui', ['ngRoute','ngResource', 'ngGrid', 'createinstance','createapps','createruns','requestServices'])
     .config(['$routeProvider', function ($routeProvider) {
         'use strict';
         $routeProvider.when('/topology', {

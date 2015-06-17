@@ -206,11 +206,16 @@ table, th, td {
     border-collapse: collapse;
 }
 .middleDiv {
-    position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+ position: fixed;
+  top: 20%;
+  left: 10%;
+  
+  
+}
+
+html body .all .column-onetwothree .ng-scope{
+	height: 20%;
+	width: 60%;
 }
 
 div.inputdata{
@@ -220,38 +225,89 @@ div.inputdata{
 }
 
 div.inputdata label{
-    float:left;
+    float:right;
     margin-right:10px;
     padding:5px 0;
-    color:gray;
+    color:#5E5E69;
+    font-size: 1.5em;
+}
+
+div.inputinstance label{
+    float:right;
+    margin-right:10px;
+    padding:5px 0;
+    color:#5E5E69;
+    font-size: 1em;
+}
+
+div label{
+    
+    color:#5E5E69;
+    font-size: 1.2em;
 }
 
 div.inputdata span{
     display: block;
     overflow: hidden;
+    padding:5px 0;
+    
+}
+.box{
+	border:none;
+	
 }
 
-div.inputdata input{
+div.inputdata input[text]{
     width:100%;
-    padding-top:8px;
-    border:none;
-    background:none;
+    
+    background:#ffffff;
 }
 
 .clear {
     clear: both; 
 }
 .buttons{
-	background-color: #428bca;
+	background-color: #737393;
 	align-content: center;
-	 -webkit-border-radius: 5px; 
-	 -moz-border-radius: 5px; 
-	 border-radius: 5px;
+	 -webkit-border-radius: 7px; 
+	 -moz-border-radius: 7px; 
+	 border-radius: 7px;
+	 height:40px; width:70px;
+	 font-size: 1.5em; color: #ffffff;
+	 margin-right:30px;
 }
 nav a {
   display: inline-block;
   padding: 5px;
 }
 
+.ellipsecss{
+	margin-top:20px
+}
 
+div.item {
+	margin-right:10px;
+	margin-top:10px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+.appimg {
+    width: 100px;
+    height: 100px;
+   
+}
+.caption {
+    display: block;
+    font-weight: bold;
+}
 
+.selected {
+        background-color : #454558;
+    }
+    
+
+.step_box a{
+	text-decoration:none;
+}

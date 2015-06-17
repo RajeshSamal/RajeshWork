@@ -35,11 +35,11 @@ public class DockerController {
 	
 	
 	
-	@RequestMapping(value="/deploy/{appName}", method=RequestMethod.POST)
+	@RequestMapping(value="/deploy/{appName}/{topology}", method=RequestMethod.POST)
 	@ResponseBody
-	public String deploy(@PathVariable String appName, @RequestParam("file") MultipartFile file) throws Throwable {
+	public String deploy(@PathVariable String appName, @PathVariable String topology,@RequestParam("file") MultipartFile file) throws Throwable {
 		
-		String IP = SshConnectionFactory.createVM(appName, file);
+		String IP = SshConnectionFactory.createVM(appName,topology, file);
 		return "";
 		
 	}

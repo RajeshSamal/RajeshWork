@@ -6,7 +6,7 @@ ci.controller('CreateAppsController', ['$scope', '$http','$location', function($
 		 
 		$scope.dockerFile =document.getElementById("fileUpload").files[0];
 		 $scope.appName = document.getElementById("applicationName").value;
-	      var myurl = 'service/deploy/'+$scope.appName;
+	      var myurl = 'service/deploy/'+$scope.appName+'/'+$scope.tmpName;
 	        var formData = new FormData();
 	        formData.append("file", $scope.dockerFile);
 	        var promise =  $http.post(myurl, formData, {
@@ -15,18 +15,20 @@ ci.controller('CreateAppsController', ['$scope', '$http','$location', function($
                },
                headers: { 'Content-Type': undefined }
                });
-	        $location.path("");
+	        $location.path("runs");
 	      
 	        
 	        
 	       
 	};
 	$scope.appName= "";
+	$scope.tmpName= "";
 	
 	$scope.setAppName = function() {
 		 
 		 
 	      $scope.appName = this.app;
+	      $scope.tmpName = this.app;
 	      
 	        
 	        
@@ -34,16 +36,7 @@ ci.controller('CreateAppsController', ['$scope', '$http','$location', function($
 	};
 	$scope.appNames = [];
 
-/*var myDataPromise = myService.getData();
-myDataPromise.then(function(result) { 
-  apps = result;
-  console.log(apps);
-  
-  
 
-  
-});
-	*/
 	 
 $http({
     method: 'GET',

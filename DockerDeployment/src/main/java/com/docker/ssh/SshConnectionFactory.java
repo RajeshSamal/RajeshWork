@@ -171,14 +171,14 @@ public static synchronized void craeteContainerScript(String topologyName) throw
 	}
 	
 	
-	public static synchronized String createVM(String name, MultipartFile json){
+	public static synchronized String createVM(String name,String topology, MultipartFile json){
 		try {
 			File f = new File("file.json");
 			f.deleteOnExit();
 			File newFile = new File("file.json");
 			newFile.createNewFile();
 			FileCopyUtils.copy(json.getBytes(), newFile);
-			SshConnectionFactory.craeteContainerScript(name);
+			SshConnectionFactory.craeteContainerScript(topology);
 			Session session = SshConnectionFactory.getSeesion("ubuntu", "208.55.220.5", "iU5ffjnrp");
 			String command = "rm -f plan.sh";
 			SshConnectionFactory.runCommand(session, command);
